@@ -21,15 +21,14 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       },
       phoneNumber: {
-        type: DataTypes.NUMBER,
-        allowNull: false
+        type: DataTypes.STRING,
       },
       gender: {
         type: DataTypes.STRING,
         allowNull: false
       },
       selfRating: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         allowNull: false
       },
     },

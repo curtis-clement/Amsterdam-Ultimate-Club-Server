@@ -43,16 +43,104 @@ module.exports = {
     const users = await Promise.all([
       User.upsert({
         id: 1,
-        name: "testuser",
-        email: "test@test.com",
-        password: bcrypt.hashSync("test1234", SALT_ROUNDS)
+        firstName: "Curtis",
+        lastName: 'Clement',
+        email: "curtis@email.com",
+        password: bcrypt.hashSync("curtis1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'M',
+        selfRating: 4
       }),
       User.upsert({
         id: 2,
-        name: "dummy",
-        email: "dummy@dummy.com",
-        password: bcrypt.hashSync("dummy1234", SALT_ROUNDS)
-      })
+        firstName: 'Elwin',
+        lastName: 'Dirske',
+        email: "elwin@email.com",
+        password: bcrypt.hashSync("test1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'M',
+        selfRating: 4
+      }),
+      User.upsert({
+        id: 3,
+        firstName: 'Andrew',
+        lastName: 'McCue',
+        email: "andrew@email.com",
+        password: bcrypt.hashSync("andrew1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'M',
+        selfRating: 4
+      }),
+      User.upsert({
+        id: 4,
+        firstName: 'Andi',
+        lastName: 'Ganzy',
+        email: "andi@email.com",
+        password: bcrypt.hashSync("andi1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'F',
+        selfRating: 5
+      }),
+      User.upsert({
+        id: 5,
+        firstName: 'Jenny',
+        lastName: 'Fielder',
+        email: "jenny@email.com",
+        password: bcrypt.hashSync("jenny1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'F',
+        selfRating: 4
+      }),
+      User.upsert({
+        id: 6,
+        firstName: 'Marina',
+        lastName: 'Bellocchino',
+        email: "marina@email.com",
+        password: bcrypt.hashSync("marina1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'F',
+        selfRating: 3
+      }),
+      User.upsert({
+        id: 7,
+        firstName: 'Remy',
+        lastName: 'Felinski',
+        email: "remy@email.com",
+        password: bcrypt.hashSync("remy1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'M',
+        selfRating: 3
+      }),
+      User.upsert({
+        id: 8,
+        firstName: 'Casper',
+        lastName: 'Schmitt',
+        email: "casper@email.com",
+        password: bcrypt.hashSync("casper1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'M',
+        selfRating: 5
+      }),
+      User.upsert({
+        id: 9,
+        firstName: 'Wieke',
+        lastName: 'Beukema',
+        email: "weike@email.com",
+        password: bcrypt.hashSync("wieke1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'F',
+        selfRating: 4
+      }),
+      User.upsert({
+        id: 10,
+        firstName: 'Tjeerd',
+        lastName: 'Ates',
+        email: "tjeerd@email.com",
+        password: bcrypt.hashSync("tjeerd1234", SALT_ROUNDS),
+        phoneNumber: '31123456789',
+        gender: 'M',
+        selfRating: 5
+      }),
     ]);
 
     console.log(`SEEDED: ${users.length} users`);
