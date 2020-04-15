@@ -79,6 +79,7 @@ module.exports = {
         password: bcrypt.hashSync("andi1234", SALT_ROUNDS),
         phoneNumber: '31123456789',
         gender: 'F',
+        role: 'member',
         selfRating: 5
       }),
       User.upsert({
