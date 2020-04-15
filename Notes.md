@@ -27,3 +27,10 @@ Order - an order has one user
   - price
 
 *** Phone Number stored as string - will need to retrieve with paseInt
+
+
+// How to add the admin role later //
+gender: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
