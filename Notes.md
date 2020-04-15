@@ -1,6 +1,7 @@
 ** Models **
 
 User --- A user can have multiple orders, a user can have multiple teams
+  - user id
   - first name
   - last name
   - email
@@ -10,6 +11,7 @@ User --- A user can have multiple orders, a user can have multiple teams
   - self rating of 1-5
 
 Team - a team can have many users
+  - team id
   - name
   - players
   - captain (two for city league)
@@ -17,8 +19,11 @@ Team - a team can have many users
 
 (Possible addition depending on time)
 Order - an order has one user
+  - order id
   - first name
   - last name
   - email
   - items
   - price
+
+*** Phone Number stored as string - will need to retrieve with paseInt
