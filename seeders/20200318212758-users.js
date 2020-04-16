@@ -42,7 +42,6 @@ module.exports = {
      */
     const users = await Promise.all([
       User.upsert({
-        id: 1,
         firstName: "Curtis",
         lastName: 'Clement',
         email: "curtis@email.com",
@@ -52,7 +51,6 @@ module.exports = {
         selfRating: 4
       }),
       User.upsert({
-        id: 2,
         firstName: 'Elwin',
         lastName: 'Dirske',
         email: "elwin@email.com",
@@ -62,7 +60,6 @@ module.exports = {
         selfRating: 4
       }),
       User.upsert({
-        id: 3,
         firstName: 'Andrew',
         lastName: 'McCue',
         email: "andrew@email.com",
@@ -72,7 +69,6 @@ module.exports = {
         selfRating: 4
       }),
       User.upsert({
-        id: 4,
         firstName: 'Andi',
         lastName: 'Ganzy',
         email: "andi@email.com",
@@ -83,7 +79,6 @@ module.exports = {
         selfRating: 5
       }),
       User.upsert({
-        id: 5,
         firstName: 'Jenny',
         lastName: 'Fielder',
         email: "jenny@email.com",
@@ -93,7 +88,6 @@ module.exports = {
         selfRating: 4
       }),
       User.upsert({
-        id: 6,
         firstName: 'Marina',
         lastName: 'Bellocchino',
         email: "marina@email.com",
@@ -103,7 +97,6 @@ module.exports = {
         selfRating: 3
       }),
       User.upsert({
-        id: 7,
         firstName: 'Remy',
         lastName: 'Felinski',
         email: "remy@email.com",
@@ -113,7 +106,6 @@ module.exports = {
         selfRating: 3
       }),
       User.upsert({
-        id: 8,
         firstName: 'Casper',
         lastName: 'Schmitt',
         email: "casper@email.com",
@@ -123,7 +115,6 @@ module.exports = {
         selfRating: 5
       }),
       User.upsert({
-        id: 9,
         firstName: 'Wieke',
         lastName: 'Beukema',
         email: "weike@email.com",
@@ -133,7 +124,6 @@ module.exports = {
         selfRating: 4
       }),
       User.upsert({
-        id: 10,
         firstName: 'Tjeerd',
         lastName: 'Ates',
         email: "tjeerd@email.com",
