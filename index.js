@@ -119,7 +119,7 @@ const authMiddleWare = require("./auth/middleware");
 
 // GET endpoint for testing purposes, can be removed
 app.get("/", (req, res) => {
-  res.send("Hi from express");
+  res.send("Hello from express! Have a lovely day :)");
 });
 
 // POST endpoint for testing purposes, can be removed
@@ -150,6 +150,12 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
 
 const authRouter = require("./routers/auth");
 app.use("/", authRouter);
+
+const usersRouter = require("./routers/users");
+app.use("/users", usersRouter);
+
+const teamsRouter = require("./routers/teams");
+app.use("/teams", teamsRouter);
 
 // Listen for connections on specified port (default is port 4000)
 const { PORT } = require("./config/constants");
