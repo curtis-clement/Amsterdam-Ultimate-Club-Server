@@ -70,7 +70,7 @@ module.exports = {
       }),
       User.upsert({
         firstName: 'Andi',
-        lastName: 'Ganzy',
+        lastName: 'Ganz',
         email: "andi@email.com",
         password: bcrypt.hashSync("andi1234", SALT_ROUNDS),
         phoneNumber: '31123456789',
