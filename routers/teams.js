@@ -13,4 +13,13 @@ router.get('/', async(request, response, next) => {
   }
 });
 
+router.post('/createteam', async(request, response, next) => {
+  try {
+  const newTeam = await Team.create(request.body);
+  response.send(request.body)
+  } catch(error) {
+    next(error);
+  }
+})
+
 module.exports = router;
