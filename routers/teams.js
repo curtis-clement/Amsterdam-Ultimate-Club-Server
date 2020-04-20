@@ -20,6 +20,22 @@ router.post('/createteam', async(request, response, next) => {
   } catch(error) {
     next(error);
   }
-})
+});
+
+router.delete('/deleteteam/:teamId', async(request, response, next) => {
+  const {teamId} = request.params
+  try {
+    const team = await Team.findByPk(teamId);
+    
+    if (!team) {
+      return response.status(404).send('Team Not Found');
+    }
+
+    const result = await team.destroy();
+
+  } catch(error) {
+    next(error);
+  }
+});
 
 module.exports = router;
