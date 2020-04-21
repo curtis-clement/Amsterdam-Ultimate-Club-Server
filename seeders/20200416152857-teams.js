@@ -1,9 +1,10 @@
 'use strict';
+
 const Team = require("../models").team;
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const users = await Promise.all([
+    const teams = await Promise.all([
       Team.upsert({
         name: 'Open 1'
       }),
