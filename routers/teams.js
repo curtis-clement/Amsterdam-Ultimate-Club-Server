@@ -32,7 +32,7 @@ router.delete('/deleteteam/:teamId', async(request, response, next) => {
     }
 
     const result = await team.destroy();
-
+    response.status(202).send('Deleted!')
   } catch(error) {
     next(error);
   }
