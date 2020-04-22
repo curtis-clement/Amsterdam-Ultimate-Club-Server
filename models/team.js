@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     'team', 
     {
     name: DataTypes.STRING
-  }, {});
+  });
 
   team.associate = function(models) {
     team.belongsToMany(models.user, 
