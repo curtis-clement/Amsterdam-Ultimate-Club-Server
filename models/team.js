@@ -5,10 +5,14 @@ module.exports = (sequelize, DataTypes) => {
     'team', 
     {
     name: DataTypes.STRING
-  }, {});
+  });
 
   team.associate = function(models) {
-    // associations can be defined here
+    team.belongsToMany(models.user, 
+      {
+        through: 'joinTeam',
+        foreignKey: 'teamId'
+      });
   };
   return team;
 };
