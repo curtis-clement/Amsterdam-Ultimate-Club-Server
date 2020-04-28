@@ -1,11 +1,14 @@
 const {Router} = require('express');
 const Team = require('../models').team;
+const Player = require('../models').user
 
 const router = new Router();
 
 router.get('/', async(request, response, next) => {
   try {
-    const teams = await Team.findAll();
+    const teams = await Team.findAll({
+      include: [Player]
+    });
     response.status(200).send({message: 'success', teams});
   } catch(error) {
     console.log(error.message);
