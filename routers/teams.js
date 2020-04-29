@@ -45,7 +45,6 @@ router.delete('/deleteteam/:teamId', async(request, response, next) => {
 router.post('/:teamId/add/:playerId', async(request, response, next) => {
   const {teamId, userId} = request.params
   try {
-    console.log('BACK END', teamId, userId)
     const newJoin = await JoinTeam.create(request.body);
     response.send(request.body)
   } catch(error){
