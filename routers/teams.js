@@ -1,6 +1,7 @@
 const {Router} = require('express');
 const Team = require('../models').team;
-const Player = require('../models').user
+const Player = require('../models').user;
+const JoinTeam = require('../models').joinTeam;
 
 const router = new Router();
 
@@ -40,5 +41,16 @@ router.delete('/deleteteam/:teamId', async(request, response, next) => {
     next(error);
   }
 });
+
+router.post('/:teamId/add/:playerId', async(request, response, next) => {
+  const {teamId, userId} = request.params
+  try {
+    console.log('BACK END', teamId, userId)
+    const newJoin = await JoinTeam.create(request.body);
+    response.send(request.body)
+  } catch(error){
+    next(error);
+  }
+})
 
 module.exports = router;

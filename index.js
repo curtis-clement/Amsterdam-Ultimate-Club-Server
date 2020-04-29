@@ -157,6 +157,9 @@ app.use("/users", usersRouter);
 const teamsRouter = require("./routers/teams");
 app.use("/teams", teamsRouter);
 
+// const joinRouter = require('./routers/join')
+// app.use('/join', joinRouter)
+
 // Listen for connections on specified port (default is port 4000)
 const { PORT } = require("./config/constants");
 
